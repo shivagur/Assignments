@@ -1,0 +1,165 @@
+Q.1. Create two int type variables, apply addition, subtraction, division and multiplications
+and store the results in variables. Then print the data in the following format by calling the
+variables:
+First variable is __ & second variable is __.
+Addition: __ + __ = __
+Subtraction: __ - __ = __
+Multiplication: __ * __ = __
+Division: __ / __ = __
+
+
+
+Answer:-
+
+
+
+# Create variables
+first_variable = 10
+second_variable = 5
+
+# Perform operations
+addition = first_variable + second_variable
+subtraction = first_variable - second_variable
+multiplication = first_variable * second_variable
+division = first_variable / second_variable
+
+# Print the results in the desired format
+print("First variable is", first_variable, "& second variable is", second_variable)
+print("Addition:", first_variable, "+", second_variable, "=", addition)
+print("Subtraction:", first_variable, "-", second_variable, "=", subtraction)
+print("Multiplication:", first_variable, "*", second_variable, "=", multiplication)
+print("Division:", first_variable, "/", second_variable, "=", division)
+
+
+output:-
+
+First variable is 10 & second variable is 5.
+Addition: 10 + 5 = 15
+Subtraction: 10 - 5 = 5
+Multiplication: 10 * 5 = 50
+Division: 10 / 5 = 2.0
+
+
+
+====================================================================================================================================================
+
+Q.2. What is the difference between the following operators:
+(i) ‘/’ & ‘//’
+(ii) ‘**’ & ‘^’
+
+Answer:-
+
+
+ The '/' operator performs floating-point division, while the '//' operator performs floor division (integer division).
+
+The '**' operator performs exponentiation, while the '^' operator performs bitwise XOR operation.
+
+
+====================================================================================================================================================
+
+Q.3. List the logical operators.
+
+
+Answer:-
+
+The logical operators in Python are:
+
+and: The and operator returns True if both operands are True, otherwise it returns False.
+
+or: The or operator returns True if at least one of the operands is True, otherwise it returns False.
+
+not: The not operator returns the opposite boolean value of the operand. If the operand is True, it returns False, and if the operand is False, it returns True.
+
+
+====================================================================================================================================================
+
+Q.4. Explain right shift operator and left shift operator with examples.
+
+Answer:-
+
+
+The right shift (>>) operator shifts the bits of a number towards the right, effectively dividing the number by 2 for each shift.
+
+The left shift (<<) operator shifts the bits of a number towards the left, effectively multiplying the number by 2 for each shift.
+
+Lets see examples:-
+
+number = 16  # Binary: 10000
+shifted = number >> 2  # Right shift by 2 positions
+
+print(shifted)  # Output: 4 (Binary: 100)
+
+
+
+number = 2  # Binary: 10
+shifted = number << 3  # Left shift by 3 positions
+
+print(shifted)  # Output: 16 (Binary: 10000)
+
+
+====================================================================================================================================================
+
+
+Q.5. Create a list containing int type data of length 15. Then write a code to check if 10 is
+present in the list or not.
+
+
+Answer:-
+
+# Create a list of integers
+my_list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+# Check if 10 is present in the list and print the result
+print("10 is present in the list.") if 10 in my_list else print("10 is not present in the list.")
+
+
+output:-
+
+10 is present in the list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

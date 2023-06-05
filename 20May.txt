@@ -1,0 +1,242 @@
+Q.1. What are keywords in python? Using the keyword library, print all the python keywords.
+
+Answer:-
+
+
+In Python, keywords are reserved words that have special meanings and purposes within the language. 
+These keywords cannot be used as identifiers (e.g., variable names, function names) 
+
+Example:
+
+import keyword as kw
+
+# Get all the Python keywords
+keywords = kw.kwlist
+
+# Print all the keywords
+for kw in keywords:
+    print(kw)
+    
+
+=========================================================================================================================================================
+
+Q.2. What are the rules to create variables in python?
+
+Answer:-
+
+To create variables in Python, follow these rules:
+
+Start with a letter or underscore.
+Use letters, digits, and underscores.
+Avoid Python keywords.
+Use descriptive and meaningful names.
+Separate words with underscores (snake_case).
+Follow Python naming conventions.
+
+=========================================================================================================================================================
+
+Q.3. What are the standards and conventions followed for the nomenclature of variables in
+python to improve code readability and maintainability?
+
+Answer:-
+
+To improve code readability and maintainability in Python, following  these standards and conventions- will help:
+
+Use lowercase letters and underscores (snake_case) for variable names.
+Avoid single character names; opt for descriptive names.
+Avoid using reserved words as variable names.
+Choose meaningful names that describe the purpose of the variable.
+Use uppercase letters and underscores for constants.
+Use CamelCase for class names.
+Use lowercase letters and underscores for module names.
+Follow guidelines for indentation and spacing.
+By following these conventions, your code will be more consistent, readable, and easier to maintain.
+
+
+
+=========================================================================================================================================================
+
+Q.4. What will happen if a keyword is used as a variable name?
+
+Answer:-
+
+it will give us the synatx error...
+
+
+=========================================================================================================================================================
+
+Q.5. For what purpose def keyword is used?
+
+Answer:-
+
+def keyword is used to create a function...
+
+def add():
+    pass
+    
+=========================================================================================================================================================
+
+Q.6. What is the operation of this special character ‘\’?
+
+
+Answer:-
+
+
+The special character \ in Python is known as the escape character. It is used to modify the interpretation of certain characters or sequences within strings. It can represent special characters like newline \n, tab \t, double quote \", single quote \', and backslash \\. It can also be used for escaping Unicode characters and as a line continuation character.
+
+
+=========================================================================================================================================================
+
+Q.7. Give an example of the following conditions:
+(i) Homogeneous list
+(ii)Heterogeneous set
+(iii)Homogeneous tuple
+
+
+Amswer:-
+
+homogeneous list contains elements of same data type
+
+str = [1,2,3,4]
+
+heterogeneous set contains elements of different datatypes.
+
+str1= {1, "2", 3.4, True}
+
+homogeneous tuple contains elements of same datatype...
+
+fruits = ("apple", "banana", "orange")
+
+
+=========================================================================================================================================================
+
+Q.8. Explain the mutable and immutable data types with proper explanation & examples.
+
+Answer:-
+
+Firstly The key difference between mutable and immutable data types is that mutable objects allow in-place modifications, while immutable objects require creating new objects when changes are needed.
+
+Immutable data types:
+
+num = 10  # Immutable integer
+name = "John"  # Immutable string
+point = (3, 4)  # Immutable tuple
+
+
+Mutable Data Types:
+
+my_list = [1, 2, 3]  # Mutable list
+my_set = {1, 2, 3}  # Mutable set
+my_dict = {"name": "John", "age": 30}  # Mutable dictionary
+
+
+=========================================================================================================================================================
+
+Q.9. Write a code to create the given structure using only for loop.
+*
+***
+*****
+*******
+*********
+
+
+Answer:-
+
+
+n = 5
+for i in range(n):
+    for j in range(2*i + 1):
+        print("*", end="")
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================================================================================================
+Q.10. Write a code to create the given structure using while loop.
+|||||||||
+|||||||
+|||||
+|||
+|
+
+
+Answer:-
+
+
+
+n = 5
+for i in range(n, -1, -1):
+    for j in range(2*i + 1):
+        print("|", end="")
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

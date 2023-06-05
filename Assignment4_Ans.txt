@@ -1,0 +1,320 @@
+1. What exactly is []?
+
+Answer:-
+
+In Python, [] is used to represent an empty list. A list is a collection of items enclosed in square brackets, and when the brackets are empty, it indicates that the list contains no elements.
+
+Example:-
+
+my_list = []
+
+===============================================================================================================================================================================================
+
+
+2. In a list of values stored in a variable called spam, how would you assign the value 'hello' as the third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+
+Answer:-
+
+spam =  [2, 4, 6, 8, 10]
+
+spam.append("hello")
+
+print(spam)
+
+===============================================================================================================================================================================================
+
+Let's pretend the spam includes the list ['a', 'b', 'c', 'd'] for the next three queries.
+3. What is the value of spam[int(int('3' * 2) / 11)]?
+
+Answer:-
+
+firstly '3' * 2 = '33'
+
+then int("33") = 33
+
+then 33/11 = 3
+
+int(3) == 3 
+
+So spam[3] = "d" which is the final answer
+
+===============================================================================================================================================================================================
+
+4. What is the value of spam[-1]?
+
+Answer:- 
+
+spam[-1] = "d"
+
+===============================================================================================================================================================================================
+5. What is the value of spam[:2]?
+
+Answer:-
+
+spam[:2] = ["a","b"]
+
+
+===============================================================================================================================================================================================
+
+
+
+
+
+Let's pretend bacon has the list bacon = [3.14, 'cat', 11 , 'cat', True] for the next three questions.
+6. What is the value of bacon.index('cat')?
+
+Answer:-
+
+bacon.index('cat') = 1
+
+===============================================================================================================================================================================================
+7. How does bacon.append(99) change the look of the list value in bacon?
+
+Answer:-
+
+[3.14, 'cat', 11, 'cat', True, 99]
+
+
+
+===============================================================================================================================================================================================
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+
+Answer:-
+
+
+[3.14, 11, True, 99, 99]
+
+
+===============================================================================================================================================================================================
+
+9. What are the list concatenation and list replication operators?
+
+
+Answer:-
+
+In Python, the list concatenation operator is the plus symbol (+), and the list replication operator is the asterisk symbol (*).
+
+List Concatenation Operator (+):
+
+Example:-
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+concatenated_list = list1 + list2
+
+print(concatenated_list)
+
+And we get the output as [1,2,3,4,5,6]
+
+List Replication Operator (*):
+
+The asterisk operator allows you to replicate a list by a specified number of times.
+
+Example:
+
+list1 = [1, 2, 3]
+replicated_list = list1 * 3
+
+print(replicated_list)
+
+
+when we run this program will get the output as [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+===============================================================================================================================================================================================
+
+10. What is difference between the list methods append() and insert()?
+
+Answer:-
+
+append() method:
+
+The append() method is used to add an element at the end of a list. It takes a single argument, which is the element you want to add
+
+my_list = [1, 2, 3]
+my_list.append(4)
+
+print(my_list)
+
+o/p :- [1,2,3,4]
+
+insert() method:
+
+The insert() method is used to add an element at a specific position within a list. It takes two arguments: the index position where you want to insert the element and the element itself
+
+my_list = [1, 2, 3]
+my_list.insert(1, 5)
+
+print(my_list)
+
+0/p:- [1, 5, 2, 3]
+
+
+===============================================================================================================================================================================================
+
+11. What are the two methods for removing items from a list?
+
+Answer:-
+
+In Python, there are two common methods for removing items from a list: remove() and pop().
+
+remove() method:
+
+The remove() method is used to remove the first occurrence of a specified element from a list. It takes a single argument, which is the element you want to remove and then removes it
+
+my_list = [1, 2, 3, 2]
+my_list.remove(2)
+
+print(my_list)
+
+o/p:- [1, 3, 2]
+
+pop() method:
+
+The pop() method is used to remove an element from a specific index position in a list. It takes an  argument  which is the index of the element you want to remove. 
+And then it modifies the original list by removing and returning the element at the specified index.
+
+my_list = [1, 2, 3]
+removed_element = my_list.pop(1)
+
+print(my_list)
+print(removed_element)
+
+o/p:- [1, 3]
+
+       2
+
+===============================================================================================================================================================================================
+
+12. Describe how list values and string values are identical.
+
+Answer:-
+
+List values and string values in Python are similar in that they are both ordered sequences, allow indexing and slicing, and can be iterated. 
+However, lists are mutable (can be modified), while strings are immutable (cannot be modified).
+
+===============================================================================================================================================================================================
+
+13. What's the difference between tuples and lists?
+
+Answer:-
+
+lists and tuples are two different datastructures in python for storing data but the main difference between them is lists are mutable and tuples are not mutable ( not changeable)
+
+===============================================================================================================================================================================================
+14. How do you type a tuple value that only contains the integer 42?
+
+Answer:-
+
+tuple = (42)
+
+print(tuple)
+
+output:- 42
+
+===============================================================================================================================================================================================
+
+15. How do you get a list value's tuple form? How do you get a tuple value's list form?
+
+Answer:-
+
+my_list = [1, 2, 3, 4, 5]
+my_tuple = tuple(my_list)
+
+print(my_tuple)
+
+
+output:- (1, 2, 3, 4, 5)
+
+so here we had converted out list named "my_list" to "my_tuple"
+
+my_tuple = (1, 2, 3, 4, 5)
+my_list = list(my_tuple)
+
+print(my_list)
+
+output:-
+[1, 2, 3, 4, 5]
+
+And here using the "my_tuple" tuple we can converted it into list
+
+===============================================================================================================================================================================================
+
+
+****16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+
+Answer:-
+
+In Python, variables are references to objects rather than containers of objects. 
+When you assign a list to a variable, the variable holds a reference to the memory location where the list object is stored. 
+It's like a pointer or a label pointing to the list in memory.
+
+For example:
+
+my_list = [1, 2, 3]
+
+
+here the variable "my_list" stores the reference location of my_list rather than actual elements of a list bcoz multiple variables can refer to the same list object.
+
+
+
+
+===============================================================================================================================================================================================
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+
+Answer:-
+
+copy.copy() creates a shallow copy of an object, which means the top-level object is copied, but the nested objects are still referenced. Modifying the nested objects in the copy will affect the original object.
+
+example for shallow copy:
+
+import copy
+
+list1 = [1, 2, [3, 4]]
+list2 = copy.copy(list1)
+
+# Modifying list2
+list2[0] = 5
+list2[2][0] = 6
+
+print(list1)  # Output: [1, 2, [6, 4]]
+print(list2)  # Output: [5, 2, [6, 4]]
+
+
+######################################
+
+example for deep copy:
+
+import copy
+
+list1 = [1, 2, [3, 4]]
+list2 = copy.deepcopy(list1)
+
+# Modifying list2
+list2[0] = 5
+list2[2][0] = 6
+
+print(list1)  # Output: [1, 2, [3, 4]]
+print(list2)  # Output: [5, 2, [6, 4]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,360 @@
+1.What are the two values of the Boolean data type? How do you write them?
+
+Answer:- 
+
+the two values of the Boolean data type are:
+
+True: It represents a true condition.
+In Python, the value True is written as True (with an uppercase "T" and the rest in lowercase).
+
+False: It represents a false or negative condition.
+In Python, the value False is written as False (with an uppercase "F" and the rest in lowercase).
+
+
+====================================================================================================================================================================================
+
+2. What are the three different types of Boolean operators?
+
+
+The three different types of Boolean operators are:
+
+AND operator (and): The and operator returns True if both operands (values or expressions) are true. Otherwise, it returns False.
+
+OR operator (or): The or operator returns True if at least one of the operands is true. If both operands are false, it returns False.
+
+NOT operator (not): The not operator is a unary operator that returns the opposite of the operand's logical value. If the operand is True, it returns False, and if the operand is False, it returns True.
+
+====================================================================================================================================================================================
+
+
+3. Make a list of each Boolean operator's truth tables (i.e. every possible combination of Boolean values for the operator and what it evaluate ).
+
+Answer:-
+
+AND Table 
+
+x y Result
+
+0 0 0
+0 1 0
+1 0 0
+1 1 1
+
+
+
+OR Table
+
+x y Result
+
+0 0 0
+0 1 1
+1 0 1
+1 1 1
+
+
+
+NOT Table
+
+x ~(x)
+
+1 0 
+
+0 1 
+
+
+====================================================================================================================================================================================
+
+
+4. What are the values of the following expressions?
+(5 > 4) and (3 == 5)
+not (5 > 4)
+(5 > 4) or (3 == 5)
+not ((5 > 4) or (3 == 5))
+(True and True) and (True == False)
+(not False) or (not True)
+
+
+
+
+Answer:-
+
+(5 > 4) and (3 == 5)   { False }
+
+not (5 > 4)            { False }
+
+
+(5 > 4) or (3 == 5)    { True }
+
+not ((5 > 4) or (3 == 5))  {False}
+
+(True and True) and (True == False)  { False }
+
+(not False) or (not True)            { True }
+
+
+====================================================================================================================================================================================
+
+
+5. What are the six comparison operators?
+
+Answer :-
+
+
+Equal to (==): Checks if two values are equal.
+
+Not equal to (!=): Checks if two values are not equal.
+
+Greater than (>): Checks if the left operand is greater than the right operand.
+
+Less than (<): Checks if the left operand is less than the right operand.
+
+Greater than or equal to (>=): Checks if the left operand is greater than or equal to the right operand.
+
+Less than or equal to (<=): Checks if the left operand is less than or equal to the right operand.
+
+These comparison operators are used to compare values and return a Boolean result (True or False) based on the comparison.
+
+
+
+====================================================================================================================================================================================
+
+6. How do you tell the difference between the equal to and assignment operators?Describe a condition and when you would use one.
+
+Answer:-
+
+Will  use the equal to operator (==) when you want to compare two values and perform different actions based on the result of the comparison. 
+On the other hand, you would use the assignment operator (=) when you want to assign a value to a variable, updating or initializing it with a new value.
+
+Example for Equal to operator (==): 
+
+x = 5
+y = 10
+
+if x == y:
+    print("x is equal to y")
+else:
+    print("x is not equal to y")
+
+
+Example for Assignment operator (=): 
+
+x = 5
+
+y = x + 2
+
+
+
+====================================================================================================================================================================================
+
+7. Identify the three blocks in this code:
+
+spam = 0
+if spam == 10:
+print('eggs')
+if spam > 5:
+print('bacon')
+else:
+print('ham')
+print('spam')
+print('spam')
+
+Answer:- 
+
+
+Firstly we can see the value 0 is assigned to spam variable . And then it checks the if conditions whether the value is equal to 0 ( i.e 0 == 10) and also >5 (i.e. 0 > 5 ) which is not true 
+
+so it goes to else block and finally prints the ham spam spam 
+
+
+
+====================================================================================================================================================================================
+
+8. Write code that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam, and prints Greetings! if anything else is stored in spam.
+
+
+Answer :-
+
+if(spam == 1):
+    print("Hello")
+if(spam == 2):
+    print("howdy")
+    
+else:
+    print("greet")
+    
+
+
+And for me its getting output as greet bcozz i had not stored anything in spam variable...
+
+
+
+
+====================================================================================================================================================================================
+
+9.If your programme is stuck in an endless loop, what keys you’ll press?
+
+Ans :- Ctrl+C to quit the program
+
+
+
+====================================================================================================================================================================================
+
+10. How can you tell the difference between break and continue?
+
+Answer:-
+
+
+In Python, the break and continue statements are used within loops to change the flow of execution. The difference between break and continue:
+
+break statement: The break statement is used to immediately exit the current loop and continue executing the code that follows the loop. When a break statement is encountered inside a loop, the loop is terminated, and the program execution continues at the next statement after the loop.
+
+Example:
+
+for i in range(1, 6):
+    if i == 3:
+        break
+    print(i)
+
+
+output:- 1 2
+
+continue statement: The continue statement is used to skip the rest of the current iteration of a loop and move to the next iteration. When a continue statement is encountered, the loop immediately jumps to the next iteration, bypassing any code that follows the continue statement within the current iteration.
+
+Example:
+
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+
+output:- 1 2 4 5 
+
+
+====================================================================================================================================================================================
+
+
+11. In a for loop, what is the difference between range(10), range(0, 10), and range(0, 10, 1)?
+
+Answer:-
+
+
+range(10) means it includes numbers starting from 0 to 9 ....
+
+range(0,10) means it also same like include starting index ( i.e. 0 ) and excludes final index ( i.e. 10 ) and writes till 9
+
+range(0, 10 , 1) means here 
+
+     start_index : 0
+     end_index : 10
+     step index : 1 
+     
+     
+So here even though the syntaxes are different the three loops gives same result. which prints the numbers from 0 to 9
+
+
+====================================================================================================================================================================================
+
+12. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent program that prints the numbers 1 to 10 using a while loop.
+
+
+Answer:-
+
+
+Using while loop:
+
+
+num = 1
+
+while(num<11):
+    print(num)
+    num = num +1
+    
+    
+    
+
+Using for loop:
+
+
+for num in range (1,11):
+    print (num)
+
+
+
+====================================================================================================================================================================================
+
+
+
+
+
+13. If you had a function named bacon() inside a module named spam, how would you call it after importing spam?
+
+
+import spam
+
+spam.bacon()
+
+
+so now from spam module bacon() is called into our RAM memory and we can use it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

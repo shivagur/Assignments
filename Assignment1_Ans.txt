@@ -1,0 +1,239 @@
+1. In the below elements which of them are values or an expression? eg:- values can be integer or string and expressions will be mathematical operators.
+
+*       -----------> expression
+
+'hello' -----------> string
+
+-87.8   -----------> floating number
+
+-       -----------> expression
+
+/       -----------> expression
+
+    •   -----------> expression
+    
+6       -----------> int number
+
+
+========================================================================================================================================================================
+
+
+2. What is the difference between string and variable?
+
+
+String: A string is a bunch of characters put together, like words or sentences. It's like a message. 
+
+Example : string = "Hello, World!"
+
+Variable: A variable is like a container that holds different things. It can hold a string, a number, or other types of information.
+
+For example:- my_variable = "Hello, World!"
+
+In short, a string is the actual text or message, while a variable is a container that can hold different types of information, including strings.
+
+
+========================================================================================================================================================================
+
+
+3. Describe three different data types.?
+
+Integer: An integer is a whole number without any decimal places.
+
+example :  0, 1, -10, and 42 are integers.
+
+String: A string is a sequence of characters, like words or sentences. It's used to represent textual information. 
+
+example: "Hello, World!", "ineuronintelligence!"  "42"
+
+Boolean: A boolean is a data type that represents either true or false. It's like a switch that can be on (true) or off (false). 
+         Booleans are commonly used in programming for making decisions or checking conditions. 
+         
+example, True and False are booleans.
+
+Also the other data types include lists ,  tuples and dictionaries  and sets...
+
+List: A list is an ordered collection of items that can be changed. It uses square brackets ([]).
+
+Tuple: A tuple is an ordered collection of items that cannot be changed once created. It uses parentheses (()).
+
+Dictionary: A dictionary is a collection of key-value pairs where each key is unique. It uses curly braces ({}) or the dict() function.
+
+Set: A set is an unordered collection of unique values. It is useful for removing duplicates and performing mathematical set operations.
+
+
+=============================================================================================================================================================================
+
+
+4. What is an expression made up of? What do all expressions do?
+
+
+
+Expressions in Python used for the purpose of computing or evaluating a value. They can perform mathematical calculations, manipulate data, compare values, or call functions. 
+Essentially, expressions are used to generate new values based on existing ones.
+
+
+examples:
+
+x = 5                   # Simple expression with a single value
+y = x + 3               # Expression combining variables and an operator
+z = len("hello")        # Expression calling the len() function
+result = (x + y) * z    # Expression combining multiple variables, operators, and function call
+
+==============================================================================================================================================================================
+
+
+5. This assignment statements, like spam = 10. What is the difference between an expression and a statement?
+
+
+The statement spam = 10 is an assignment statement in Python. It assigns the value 10 to the variable spam.
+
+In Python, assignment statements are used to assign values to variables. They do not produce a value themselves, unlike expressions which evaluate to a value.
+
+For example lets now understand the kdifference  between an expression and an assignment statement:
+
+x = 5           # Assignment statement: assigns the value 5 to the variable x
+y = x + 3       # Expression: evaluates the sum of x and 3 and assigns the result to the variable y
+
+
+From the above example  x = 5 is an assignment statement that assigns the value 5 to the variable x. 
+On the other hand, x + 3 is an expression that evaluates to 8, and the result of this expression is assigned to the variable y.
+
+So spam = 10 is a statement that performs the assignment of the value 10 to the variable spam .
+
+
+====================================================================================================================================================================================
+
+
+6. After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+
+Ans:- 
+
+the variable bacon still holds 22 itself because even though it is added with 1 but it is not assigned to any other variable to reflect the result .
+
+So bacon = 22 is the answer.
+
+
+====================================================================================================================================================================================
+
+7. What should the values of the following two terms be?
+'spam' + 'spamspam'
+'spam' * 3
+
+
+Ans:-
+
+'spam' + 'spamspam' === 'spamspamspam'
+
+
+'spam' * 3 ===  'spamspamspam'
+
+
+====================================================================================================================================================================================
+
+8. Why is eggs a valid variable name while 100 is invalid?
+
+Answer:-
+
+Here are the reasons why "eggs" is a valid variable name while "100" is invalid:
+
+Start with a letter or underscore: In Python, variable names must begin with a letter (a-z, A-Z) or an underscore (_). "eggs" starts with a letter, making it a valid variable name. On the other hand, "100" starts with a number, which violates this rule.
+
+Consist of letters, numbers, or underscores: Variable names can contain letters, numbers, or underscores after the initial character. For example, "eggs2" and "eggs_2" are valid variable names because they consist of letters, numbers, and underscores. However, "100" consists solely of numbers, and therefore it is considered an invalid variable name.
+
+
+====================================================================================================================================================================================
+
+
+9. What three functions can be used to get the integer, floating-point number, or string version of a value?
+
+Answer:-
+
+int(): The int() function is used to convert a value into an integer. It can be used with numeric values or strings that represent valid integers. If the value is a floating-point number, it will be truncated towards zero. 
+
+Example:-
+
+value = 10.5
+integer_value = int(value)
+print(integer_value)  # Output: 10
+
+float(): The float() function is used to convert a value into a floating-point number. It can be used with numeric values or strings that represent valid floating-point numbers. 
+
+ example:
+ 
+ value = 10
+float_value = float(value)
+print(float_value)  # Output: 10.0
+
+str(): The str() function is used to convert a value into a string. It can be used with any data type to obtain its string representation. 
+
+example:
+
+value = 10
+string_value = str(value)
+print(string_value)  # Output: "10"
+
+====================================================================================================================================================================================
+
+10. Why does this expression cause an error? How can you fix it?
+'I have eaten ' + 99 + ' burritos.'
+
+
+Firstly when executing above statement getting we cannot concatenate int with strings error. So i had inserted 99 into "99" and then executed 
+
+'I have eaten ' + "99" + ' burritos.'
+
+output:- 'I have eaten 99 burritos.'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

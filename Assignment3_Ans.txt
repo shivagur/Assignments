@@ -1,0 +1,271 @@
+
+1. Why are functions advantageous to have in your programs?
+
+Answer:-
+
+Functions are advantageous in Python because they:
+
+Help organize your code and make it easier to understand.
+Enable you to reuse code, reducing duplication and promoting efficiency.
+Enhance modularity and maintainability by breaking down complex tasks into smaller, manageable parts.
+
+
+==============================================================================================================================================================================================
+
+2. When does the code in a function run: when it's specified or when it's called?
+
+
+Answer:-
+
+The code in a function will be executed when and only the the function is called...
+
+And we can call our functions any number of times and thats what it makes the code reusable 
+
+==============================================================================================================================================================================================
+
+3. What statement creates a function?
+
+Answer:-
+
+def keyword is used for creating a function .
+
+
+Example:-
+
+def function_name(parameters):
+    # Code block
+    # Indented statements that define what the function does
+
+
+==============================================================================================================================================================================================
+
+4. What is the difference between a function and a function call?
+
+Answer:-
+
+A function is a block of code that has a name and can be executed multiple times within a program. It is defined once and can be reused at different points in the program. A function can accept input values called parameters or arguments, perform a specific task, and optionally return a result.
+
+On the other hand, a function call is a statement that  executes a specific function at a particular point in the program. 
+When a function call is encountered, the program jumps to the function's code, executes it with the provided arguments, and then returns to the point of the function call to continue executing the remaining code.
+
+==============================================================================================================================================================================================
+
+5. How many global scopes are there in a Python program? How many local scopes?
+
+Answer:-
+
+	In a Python program, there is only one global scope, which is created when the program starts executing.On the other hand, local scopes are created whenever a function is called. Each function call creates a new local scope, which is separate from the global scope and other local scopes. Local scopes are used to store and access variables defined within the function. When a function finishes executing, its local scope is destroyed.
+	
+	
+==============================================================================================================================================================================================
+
+6. What happens to variables in a local scope when the function call returns?
+
+Answer:-
+
+When a function call returns in Python, the local scope created during the execution of that function is destroyed, and the variables defined within that local scope cease to exist. This means that any variables created within the function's code block are no longer accessible outside of the function after the function call returns.
+
+Example:
+
+def my_function():
+    x = 10
+    print(x)
+
+my_function()
+print(x)  # Raises an error: NameError: name 'x' is not defined
+
+==============================================================================================================================================================================================
+
+7. What is the concept of a return value? Is it possible to have a return value in an expression?
+
+Answer:-
+
+The return statement is used in Python to explicitly specify the value to be returned by a function. It  appears at the end of a function and can be followed by an expression that calculates the value to be returned. 
+
+Example:
+
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(3, 5)
+print(result)  # Output: 8
+
+
+
+==============================================================================================================================================================================================
+
+8. If a function does not have a return statement, what is the return value of a call to that function?
+
+Answer:-
+
+If a function does not have a return statement or if the return statement is present without any expression following it, the return value of a call to that function is None.
+
+for example:
+
+def greet(name):
+    print("Hello, " + name)
+
+result = greet("Alice")
+print(result)  # Output: None
+
+
+
+==============================================================================================================================================================================================
+
+9. How do you make a function variable refer to the global variable?
+
+Answer:-
+
+To make a function variable refer to the global variable with the same name, you can use the global keyword within the function. 
+
+for example:-
+
+x = 10  # Global variable
+
+def modify_global_variable():
+    global x  # Declare 'x' as a global variable within the function
+    x = 20    # Modify the value of the global 'x'
+
+print(x)  # Output: 10
+modify_global_variable()
+print(x)  # Output: 20
+
+
+
+==============================================================================================================================================================================================
+
+10. What is the data type of None?
+
+Answer:-
+
+Certainly! In simple terms, in Python, None is a special value that represents the absence of a value or the lack of a specific object. It is used to indicate that something doesn't have a value or that a variable has not been assigned a value yet.
+
+
+==============================================================================================================================================================================================
+
+11. What does the sentence import are all yourpetsnamederic do?
+
+
+Answer:-
+
+The sentence import are all yourpetsnamederic does not have any specific meaning in Python. In Python, the import statement is used to import modules  that contain pre-defined functionality that can be used in  code.
+ But this sentence is not a valid module or package name in Python, so it would result in a ModuleNotFoundError if you try to execute it.
+
+==============================================================================================================================================================================================
+
+12. If you had a bacon() feature in a spam module, what would you call it after importing spam?
+
+Answer:-
+
+import spam
+spam.bacon()
+
+==============================================================================================================================================================================================
+
+13. What can you do to save a programme from crashing if it encounters an error?
+
+Answer:-
+
+To prevent a program from crashing in Python when encountering an error, we can use try-except blocks.
+ By placing the potentially problematic code within a try block and specifying the type of exception to catch in an except block we  can handle  exceptions  and avoid program crashes.
+
+
+
+
+==============================================================================================================================================================================================
+
+14. What is the purpose of the try clause? What is the purpose of the except clause?
+
+Answer:-
+
+The purpose of the `try` clause in Python is to enclose code that might raise an exception. It allows  to handle potential errors and exceptions gracefully.
+
+The purpose of the `except` clause is to define the code that will be executed if a specific exception occurs within the corresponding `try` block. It allows  to catch and handle exceptions, enabling  to respond to exceptional conditions .
+
+
+
+==============================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
