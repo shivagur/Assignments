@@ -1,0 +1,501 @@
+1. What is a lambda function in Python, and how does it differ from a regular function?
+
+Answer:-
+
+Lambda functions are often used in Python for functional programming concepts, such as mapping, filtering, and sorting, or as a convenient way to define simple functions inline without the need for a formal function definition.
+
+
+In Python, a lambda function, also known as an anonymous function, is a way to create small, one-line functions without a name. 
+
+Lambda functions are defined using the lambda keyword and can take any number of arguments but can only have a single expression
+
+Syntax:
+
+lambda arguments: expression
+
+Lambda functions are different from regular functions in a few ways like syntax, function name , size and simplicity and the return statement 
+
+=========================================================================================================================================================================================
+
+
+2. Can a lambda function in Python have multiple arguments? If yes, how can you define and use them?
+
+Answer:-
+
+Yes, a lambda function in Python can have multiple arguments. You can define and use multiple arguments in a lambda function by separating them with commas in the argument list. 
+
+Syntax:
+
+my_function = lambda arg1, arg2, arg3: expression
+
+
+Example:
+
+# Lambda function with multiple arguments
+addition = lambda x, y: x + y
+
+# Using the lambda function
+result = addition(3, 5)
+print(result)
+
+=========================================================================================================================================================================================
+
+3. How are lambda functions typically used in Python? Provide an example use case.
+
+Answer:-
+
+
+Lambda functions in Python are typically used in situations where a small, one-time function is required, often in combination with higher-order functions like map(), filter(), or sort().
+
+examples:
+
+# List of numbers
+numbers = [1, 2, 3, 4, 5]
+
+➡️# Example 1: Mapping
+
+squared_numbers = list(map(lambda x: x**2, numbers))
+print(squared_numbers)
+
+
+output:-
+
+[1, 4, 9, 16, 25]
+
+➡️# Example 2: Filtering
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+
+output:-
+
+[2, 4]
+
+
+➡️Example 3 : sorting
+
+# List of dictionaries
+people = [
+    {"name": "Alice", "age": 28},
+    {"name": "Bob", "age": 35},
+    {"name": "Charlie", "age": 22},
+    {"name": "David", "age": 31},
+]
+
+# Sort the list of dictionaries by age
+people.sort(key=lambda x: x['age'])
+
+# Print the sorted list
+for person in people:
+    print(person)
+
+output:-
+
+{'name': 'Charlie', 'age': 22}
+{'name': 'Alice', 'age': 28}
+{'name': 'David', 'age': 31}
+{'name': 'Bob', 'age': 35}
+
+
+=========================================================================================================================================================================================
+
+4. What are the advantages and limitations of lambda functions compared to regular functions in Python?
+
+Advantages of Lambda Functions:
+
+Concise and readable syntax
+Anonymous function creation
+Suitable for simple and one-time use cases
+Can be used in functional programming paradigms
+Limitations of Lambda Functions:
+
+Limited to a single expression
+Cannot contain multiple statements or complex logic
+Lack of function name can make code harder to understand and debug
+Not suitable for functions requiring extensive documentation or reusability
+
+=========================================================================================================================================================================================
+
+5. Are lambda functions in Python able to access variables defined outside of their own scope? Explain with an example.
+
+Answer:-
+
+def outer_function():
+    message = "Hello"
+
+    # Lambda function accessing the 'message' variable from outer_function's scope
+    inner_function = lambda: message + " World"
+
+    return inner_function
+
+# Call outer_function to get the lambda function
+my_function = outer_function()
+
+# Call the lambda function
+print(my_function())
+
+
+output:-
+
+Hello World
+
+
+=========================================================================================================================================================================================
+
+
+6. Write a lambda function to calculate the square of a given number.
+
+Answer:-
+
+inner = lambda x : x**2 
+print(inner(2))
+
+
+
+=========================================================================================================================================================================================
+
+7. Create a lambda function to find the maximum value in a list of integers.
+
+Answer:-
+
+max_value = lambda x: max(x)
+
+numbers = [5, 2, 9, 1, 7]
+result = max_value(numbers)
+print(result)
+
+output:-
+
+9
+
+
+=========================================================================================================================================================================================
+
+8. Implement a lambda function to filter out all the even numbers from a list of integers.
+
+
+
+Answer:-
+
+even_numbers = lambda x: list(filter(lambda num: num % 2 == 0, x))
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = even_numbers(numbers)
+print(result)
+
+output:-
+
+[2, 4, 6, 8, 10]
+
+
+
+=========================================================================================================================================================================================
+
+9. Write a lambda function to sort a list of strings in ascending order based on the length of each string.
+
+Answer:
+
+
+
+rstrings = ["as", "og","nmb","GOSS","rmfngkjt"]
+
+rstrings.sort(key=lambda x: len(x))
+
+for str in rstrings:
+    print(str)
+    
+    
+output:-
+
+as
+og
+nmb
+GOSS
+rmfngkjt
+
+=========================================================================================================================================================================================
+
+10. Create a lambda function that takes two lists as input and returns a new list containing the common elements between the two lists.
+
+
+Answer:-
+
+l1 = [1, 49, "sss", "rs"]
+l2 = [49, "rs", "goss", "og", "mnb"]
+
+c_elements = lambda l1, l2: list(set(l1).intersection(l2))
+
+result = c_elements(l1, l2)
+print(result)
+
+
+output:-
+
+[49, 'rs']
+
+
+
+=========================================================================================================================================================================================
+
+11. Write a recursive function to calculate the factorial of a given positive integer.
+
+Answer:-
+
+def fact(n):
+    if(n == 0 or n == 1):
+        return 1
+    else:
+        return n * fact(n-1)
+    
+fact(5)
+
+
+=========================================================================================================================================================================================
+
+12. Implement a recursive function to compute the nth Fibonacci number.
+
+Answer:-
+
+def fibonacci(n):
+    if n <= 0:
+        return None
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+n = 10
+result = fibonacci(n)
+print("The", n, "th Fibonacci number is:", result)
+
+
+output:-
+
+The 10th Fibonacci number is: 34
+
+
+=========================================================================================================================================================================================
+
+13. Create a recursive function to find the sum of all the elements in a given list.
+
+Answer:-
+
+def recursive_sum(lst):
+    if not lst:
+        return 0
+    else:
+        return lst[0] + recursive_sum(lst[1:])
+
+
+
+my_list = [1, 2, 3, 4, 5]
+result = recursive_sum(my_list)
+print("The sum of the elements in the list is:", result)
+
+
+output:-
+
+The sum of the elements in the list is: 15
+
+=========================================================================================================================================================================================
+
+
+14. Write a recursive function to determine whether a given string is a palindrome.
+
+Answer:-
+
+def is_palindrome(string):
+    if len(string) <= 1:
+        return True
+    elif string[0] != string[-1]:
+        return False
+    else:
+        return is_palindrome(string[1:-1])
+
+
+my_string = "madam"
+result = is_palindrome(my_string)
+if result:
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+
+output:-
+
+The string is a palindrome.
+
+=========================================================================================================================================================================================
+
+15. Implement a recursive function to find the greatest common divisor (GCD) of two positive integers.
+
+Answer:-
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+num1 = 24
+num2 = 36
+result = gcd(num1, num2)
+print("The GCD of", num1, "and", num2, "is:", result)
+
+
+output:-
+
+The GCD of 24 and 36 is: 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

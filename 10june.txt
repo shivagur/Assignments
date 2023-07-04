@@ -1,0 +1,455 @@
+1. In Python, what is the difference between a built-in function and a user-defined function? Provide an example of each.
+
+Answer:- 
+
+Built-in functions:
+
+Built-in functions are pre-defined functions that are available in Python without the need for any additional imports or code. 
+
+
+Example: len()
+
+The len() function is a built-in function that returns the length of an object, such as a string, list, or tuple. 
+
+my_string = "Hello, World!"
+length = len(my_string)
+print(length)  # Output: 13
+
+
+User-defined functions:
+
+User-defined functions are created by us to perform specific tasks or to mix a sequence of operations into a reusable block of code. 
+These functions are defined using the def keyword followed by the function name
+
+Example:
+
+multiply()
+The multiply() function takes two numbers as input 
+
+def multiply(a, b):
+    return a * b
+
+result = multiply(5, 7)
+print(result)  # Output: 35
+
+
+=========================================================================================================================================================================================
+
+2. How can you pass arguments to a function in Python? Explain the difference between positional arguments and keyword arguments.
+
+Answer:-
+
+
+Positional arguments are passed to a function based on their position in the function's parameter list. The order of the arguments matters.
+
+Example:
+
+def greet(name, age):
+    print("Hello,", name)
+    print("Your age is:", age)
+
+greet("Alice", 25)
+
+output:-
+
+Hello, Alice
+Your age is: 25
+
+Keyword arguments are passed to a function using the syntax parameter_name=value. The order of the arguments doesn't matter as they are explicitly assigned based on their parameter names.
+
+Example:
+
+
+def greet(name, age):
+    print("Hello,", name)
+    print("Your age is:", age)
+
+greet(age=25, name="Alice")
+
+Output:-
+
+Hello, Alice
+Your age is: 25
+
+
+=========================================================================================================================================================================================
+
+
+3. What is the purpose of the return statement in a function? Can a function have multiple return statements? Explain with an example.
+
+Answer:-
+
+The return statement in Python is used to specify the value that a function should return when it is called. It allows a function to write a result and provide that result back to the code that called the function. The return statement also terminates the execution of the function.
+
+A function can have multiple return statements but only one of them will be executed...
+
+
+Example:-
+
+
+def absolute_value(x):
+    if x < 0:
+        return -x
+    else:
+        return x
+
+result1 = absolute_value(-5)
+print(result1)  # Output: 5
+
+result2 = absolute_value(10)
+print(result2)  # Output: 10
+
+
+=========================================================================================================================================================================================
+
+
+4. What are lambda functions in Python? How are they different from regular functions? Provide an example where a lambda function can be useful.
+
+Answer:-
+
+Lambda functions, also known as anonymous functions, are a way to create small, one-line functions in Python without using the def keyword. 
+
+Syntax:
+
+lambda arguments: expression
+
+
+☑️Lambda functions have the following characteristics that differentiate them from regular functions:
+
+➡️Anonymous: Lambda functions don't have a name. They are defined using the lambda keyword followed by a set of arguments and an expression. They are typically used when you need a small func
+
+➡️Single Expression: Lambda functions can only contain a single expression. This expression is evaluated and returned as the result of the function.
+
+➡️Concise: Lambda functions are usually used for short, simple operations. They are not intended to replace complex functions.
+
+
+
+Example:
+
+
+square = lambda x: x**2
+
+result = square(5)
+print(result)  
+
+Output: 25
+
+
+
+And mainly Lambda functions are particularly useful in scenarios where you need a small function for a specific purpose.They are commonly used in combination  with functions like map(), filter(), or sort() that expect a function as an argument.
+
+
+
+=========================================================================================================================================================================================
+
+
+5. How does the concept of "scope" apply to functions in Python? Explain the difference between local scope and global scope.
+
+Answer:-
+
+ Local variables are only accessible within the block or function in which they are defined.
+ 
+ Global variables can be accessed and modified from anywhere within the program.
+ 
+ For example:-
+ 
+ x = 10  # Global variable
+
+def my_function():
+    y = 20  # Local variable
+    print(x)  # Accessing global variable
+    print(y)  # Accessing local variable
+
+my_function()
+print(x)  # Accessing global variable outside the function
+print(y)  # Error: y is not defined
+
+
+=========================================================================================================================================================================================
+
+6. How can you use the "return" statement in a Python function to return multiple values?
+
+Answer:-
+
+To return multiple values from a Python function:
+
+➡️We can use a tuple to pack the values and return the tuple.
+➡️And also  can return a list, dictionary, or custom object that holds the multiple values.
+
+examples:
+
+USING TUPLE:
+
+def multiple_values():
+    value1 = 10
+    value2 = "Hello"
+    return value1, value2
+
+result = multiple_values()
+print(result)  # (10, "Hello")
+
+
+USING LIST:
+
+def multiple_values():
+    values = [10, "Hello"]
+    return values
+
+result = multiple_values()
+print(result)  # [10, "Hello"]
+
+
+USING DICTIONARY:
+
+def multiple_values():
+    values = {"value1": 10, "value2": "Hello"}
+    return values
+
+result = multiple_values()
+print(result)  # {"value1": 10, "value2": "Hello"}
+
+
+RETURNING A CUSTOM OBJECT:
+
+
+class MyObject:
+    def __init__(self, value1, value2):
+        self.value1 = value1
+        self.value2 = value2
+
+def multiple_values():
+    obj = MyObject(10, "Hello")
+    return obj
+
+result = multiple_values()
+print(result.value1)  # 10
+print(result.value2)  # "Hello"
+
+
+But at a time a single func can return only one thing and in that we can use the above different ones as per our requiremtn.
+
+
+
+=========================================================================================================================================================================================
+
+7. What is the difference between the "pass by value" and "pass by reference" concepts when it
+comes to function arguments in Python?
+
+Answer:-
+
+Python uses a mechanism called "pass by object reference." When you pass an argument to a function, you are actually passing a reference to the object rather than the object itself. 
+
+This means that changes made to mutable objects inside the function can affect the original object outside the function.
+
+In Python 
+
+➡️Immutable Objects (pass by object reference):
+
+When you pass an immutable object, such as numbers, strings, or tuples, as an argument to a function, it behaves like pass by value. 
+
+The function receives a copy of the reference to the object, but the object itself cannot be modified. 
+
+Any changes made to the parameter inside the function will not affect the original object.
+
+
+Pass by Value (Immutable Object):
+
+def increment(number):
+    number += 1
+    print("Inside the function:", number)
+
+value = 5
+increment(value)
+print("Outside the function:", value)
+
+output:-
+
+Inside the function: 6
+Outside the function: 5
+
+
+here When we call the increment function with value as an argument, a copy of the value 5 is passed to the function. The increment operation inside the function modifies the local copy of number, but it does not affect the original value outside the function.
+
+
+➡️Mutable Objects (pass by object reference):
+
+When you pass a mutable object, such as lists or dictionaries, as an argument to a function, the function receives a copy of the reference to the object. 
+
+However, since the object is mutable, changes made to the parameter inside the function can modify the original object. 
+
+This is because both the original reference and the parameter reference point to the same underlying object.
+
+
+Pass by Reference (Mutable Object):
+
+def add_item(lst, item):
+    lst.append(item)
+    print("Inside the function:", lst)
+
+my_list = [1, 2, 3]
+add_item(my_list, 4)
+print("Outside the function:", my_list)
+
+
+output:-
+
+Inside the function: [1, 2, 3, 4]
+Outside the function: [1, 2, 3, 4]
+
+
+in this example When we call the add_item function with my_list as the argument, a copy of the reference to my_list is passed to the function. Both my_list and lst refer to the same underlying list object. Therefore, when we modify lst by appending item inside the function, it affects the original my_list outside the function as well. 
+
+
+
+=========================================================================================================================================================================================
+
+
+
+8. Create a function that can intake integer or decimal value and do following operations:
+a. Logarithmic function (log x)
+b. Exponential function (exp(x))
+c. Power function with base 2 (2 x )
+d. Square root
+
+Answer:-
+
+from math import *
+def num(x):
+    y = log(x)
+    z = exp(x)
+    a = pow(2,x)
+    b = sqrt(x)
+    print("y value is", y , "z value is", z , "a value is" , a , "b value is" , b)
+
+
+    
+num(5.5)
+
+
+
+=========================================================================================================================================================================================
+
+9. Create a function that takes a full name as an argument and returns first name and last name.
+
+
+Answer:
+
+def fullname(x):
+    parts = x.split("_")
+    firstname = parts[0]
+    lastname = parts[1]
+    middlename = parts[2]
+    return firstname, middlename, lastname
+
+result = fullname("omshivasai_Gurrapu_nmb")
+print("First Name:", result[0])
+print("middle Name:", result[2])
+print("Last Name:", result[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
