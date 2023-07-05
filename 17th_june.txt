@@ -1,0 +1,357 @@
+1. What is the role of try and exception block?
+
+Answer:-
+
+The try-except block in Python is used for error handling and exception handling. It allows you to catch and handle exceptions that may occur during the execution of your code, 
+
+We can have multiple except blocks to handle different types of exceptions.
+
+And finally will execute irrespective of whether any try or except blocks execute or not. 
+
+
+try:
+    # Code that might raise an exception
+    # ...
+except ExceptionType:
+    # Code to handle the exception
+    # ...
+else:
+     # if in try block no errors occur then this else block will execute by skipping the code in except block
+finally:
+    # Code that will always execute
+    # ...
+
+================================================================================================================================================================================================
+
+2. What is the syntax for a basic try-except block?
+
+Answer:-
+
+SYNTAX:-
+
+try:
+    # Code that might raise an exception
+    # ...
+except ExceptionType:
+    # Code to handle the exception
+    # ...
+
+EXAMPLE:-
+
+try:
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+    
+except ZeroDivisionError:
+    print("Division by zero is not possible please.")
+
+
+================================================================================================================================================================================================
+
+3. What happens if an exception occurs inside a try block and there is no matching except block?
+
+Answer:-
+
+try:
+    # Code that might raise an exception
+    # ...
+except ValueError:
+    # Code to handle ValueError
+    # ...
+
+If we can see above  exception if  other than ValueError occurs within the try block, such as a TypeError or ZeroDivisionError, there is no matching except block to handle those exceptions. 
+
+In such cases, the exception will not be caught by this try-except block, and it will propagate up the call stack. If outside exception is still not caught up then  the exception message and stack trace will be displayed.
+
+But by declaring a generic except block outside without specifying any exception type  we can catch any exceptions that were not explicitly handled by previous except blocks. this is the best way and is useful for debugging purpose also.
+
+
+================================================================================================================================================================================================
+
+4. What is the difference between using a bare except block and specifying a specific exception type?
+
+Answer:-
+
+The bare except block is used whenever there are more than one type of error occurs in try block and we dont usually declare such exception type in our except block so that the exception message wont be displayed 
+
+
+And by specifying the specific exception type in except block which we do because there may be few errors like TypeError or ValueError in our code which we placed inside try block so to handle them we do mention it inside except block by specifying specific exception type.
+
+================================================================================================================================================================================================
+
+5. Can you have nested try-except blocks in Python? If yes, then give an example.
+
+Answer:
+
+
+
+Yes we  can have nested try-except blocks in Python which  means that you can have a try-except block inside another try block. 
+This nested structure allows for handling exceptions at different levels of code execution, providing more granular error handling.
+
+example:
+
+try:
+    # Outer try block
+    x = int(input("Enter a number: "))
+    try:
+        # Inner try block
+        result = 10 / x
+        print("Result:", result)
+    except ZeroDivisionError:
+        print("Cannot divide by zero.")
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+
+
+
+
+================================================================================================================================================================================================
+
+6. Can we use multiple exception blocks, if yes then give an example.
+
+
+Answer:-
+
+Yes, you can use multiple except blocks to handle different types of exceptions in Python. This allows  to provide specific handling for each exception type that we mention  in our code.
+
+
+Example:
+
+try:
+    # Code that might raise an exception
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+except ValueError:
+    # Handling a ValueError
+    print("Invalid input. Please enter a valid number.")
+except ZeroDivisionError:
+    # Handling a ZeroDivisionError
+    print("Cannot divide by zero.")
+
+================================================================================================================================================================================================
+
+7. Write the reason due to which following errors are raised:
+a. EOFError
+b. FloatingPointError
+c. IndexError
+d. MemoryError
+e. OverflowError
+f. TabError
+g. ValueError
+
+
+Answer:-
+
+a. EOFError:-  It occurs when an expected input is not provided, and the end of the file is encountered unexpectedly. when the input() function reaches the end of file while reading user input.
+
+b. FloatingPointError :- This error is raised when a floating-point operation encounters an exceptional condition that cannot be handled. It typically occurs when performing arithmetic operations on 
+
+floating-point numbers, such as division by zero or an invalid mathematical operation.
+
+
+c. IndexError : This error is raised when you try to access an index of a sequence (such as a list or a string) that is out of range.
+
+d. MemoryError:- This error is raised when an operation fails due to insufficient memory. It occurs when the Python program cannot allocate enough memory to perform a specific operation.
+
+e. OverflowError:- It occurs when performing operations that lead to a value that is too large to be represented, such as multiplying or exponentiating large numbers.
+
+f. TabError :- This error is raised when there is an incorrect or inconsistent use of tabs and spaces in the indentation of Python code.
+
+g. ValueError :- This error is raised when a function receives an argument of the correct type but with an invalid value. 
+
+
+================================================================================================================================================================================================
+
+8. Write code for the following given scenario and add try-exception block to it.
+a. Program to divide two numbers
+b. Program to convert a string to an integer
+c. Program to access an element in a list
+d. Program to handle a specific exception
+e. Program to handle any exception
+
+
+
+Answer:-
+
+
+a. Program to divide two numbers
+
+try:
+    numerator = float(input("Enter the numerator: "))
+    denominator = float(input("Enter the denominator: "))
+    result = numerator / denominator
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+
+b. Program to convert a string to an integer:
+
+
+try:
+    num_str = input("Enter a number: ")
+    num = int(num_str)
+    print("Number:", num)
+except ValueError:
+    print("Error: Invalid input. Please enter a valid number.")
+
+c. Program to access an element in a list:
+
+
+try:
+    my_list = [1, 2, 3, 4, 5]
+    index = int(input("Enter the index: "))
+    element = my_list[index]
+    print("Element at index", index, ":", element)
+except IndexError:
+    print("Error: Index out of range.")
+
+
+d. Program to handle a specific exception:
+
+try:
+    file = open("myfile.txt", "r")
+    # Code that uses the file
+    file.close()
+except FileNotFoundError:
+    print("Error: The file could not be found.")
+
+
+e. Program to handle any exception:
+
+
+synatax:
+
+try:
+    # Some code that may raise an exception
+except Exception as e:
+    # Code to handle the exception
+
+
+Example:
+
+try:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 / num2
+    print("Result:", result)
+except Exception as e:
+    print("Error occurred:", str(e))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
